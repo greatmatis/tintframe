@@ -1,8 +1,8 @@
-if (figma.currentPage.selection != 0) { //checking if any frme selected
+if (figma.currentPage.selection != 0) { //checking if any frame selected
 
   for (const frame of figma.currentPage.selection) {
     const rect = figma.createRectangle(); //draw a rectangle
-    frame.appendChild(rect) //putting in into frame
+    frame.appendChild(rect) //putting it into frame
     rect.fills = [{ type: 'SOLID', color: { r: 0, g: 0, b: 0 }, opacity: 0.5 }] //fill it with semi-transparent black
     rect.resize(frame.width, frame.height) //resize it to frame
     rect.constraints = { horizontal: 'SCALE', vertical: 'SCALE' } //setting constraints
